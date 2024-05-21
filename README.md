@@ -1,5 +1,5 @@
 <h1 align="center">это первый мой полноценный проект Skillcinema!</h1>
-<h1 align="center"> В него входят такие технологии как:</h1>
+<h1 align="left"> В него входят такие технологии как:</h1>
 
 <h3 align="left">-RecyclerView</h3>
 <h3 align="left">-Paging</h3>
