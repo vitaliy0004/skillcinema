@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.final_android_lvl1.presentetion.greetings.fragment.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/greetings_fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_createCollectionsFragment"
+            app:destination="@id/createCollectionsFragment"
+            app:enterAnim="@anim/open"
+            app:exitAnim="@anim/alfa" />
+    </fragment>
+    <fragment
+        android:id="@+id/createCollectionsFragment"
+        android:name="com.example.final_android_lvl1.presentetion.greetings.fragment.CreateCollectionsFragment"
+        android:label="fragment_create_collections"
+        tools:layout="@layout/greetins_fragment_create_collections" >
+        <action
+            android:id="@+id/action_createCollectionsFragment_to_friendFragment"
+            app:destination="@id/friendFragment"
+            app:enterAnim="@anim/open"
+            app:exitAnim="@anim/alfa" />
+    </fragment>
+    <fragment
+        android:id="@+id/friendFragment"
+        android:name="com.example.final_android_lvl1.presentetion.greetings.fragment.FriendFragment"
+        android:label="greetings_fragment_friends"
+        tools:layout="@layout/greetings_fragment_friends" >
+        <action
+            android:id="@+id/action_friendFragment_to_toMainFragment"
+            app:destination="@id/toMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/toMainFragment"
+        android:name="com.example.final_android_lvl1.presentetion.greetings.fragment.ToMainFragment"
+        android:label="greetings_fragment_to_main"
+        tools:layout="@layout/greetings_fragment_to_main" />
+
+
+</navigation>

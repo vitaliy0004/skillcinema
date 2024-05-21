@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentetion.basic.search.FilterFilmFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_name_collection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                android:id="@+id/name_collection"
+                layout="@layout/main_item_collection_name" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/search_settings_label_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:paddingHorizontal="20sp"
+            android:text="@string/show"
+            android:textColor="@color/teal_200"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_name_collection" />
+
+        <RadioGroup
+            android:id="@+id/search_radio_group_film_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20sp"
+            android:layout_marginVertical="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_settings_label_show">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/search_radio_all"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="-1dp"
+                android:layout_weight="0.2"
+                android:background="@drawable/radio_selector_left"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/all"
+                android:textColor="@color/selection_radio_color"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/search_radio_films"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:background="@drawable/radio_selector_center"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/film"
+                android:textColor="@color/selection_radio_color"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/search_radio_series"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-1dp"
+                android:layout_weight="0.2"
+                android:background="@drawable/radio_selector_right"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/seanson"
+                android:textColor="@color/selection_radio_color"
+                android:textSize="14sp" />
+
+        </RadioGroup>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_params"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20sp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/search_radio_group_film_type">
+
+            <include
+                android:id="@+id/country"
+                layout="@layout/main_item_search_params" />
+
+            <include
+                android:id="@+id/genre"
+                layout="@layout/main_item_search_params" />
+
+            <include
+                android:id="@+id/years"
+                layout="@layout/main_item_search_params" />
+
+            <include
+                android:id="@+id/rating"
+                layout="@layout/main_item_search_params" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.slider.RangeSlider
+            android:id="@+id/search_settings_rating_slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="26dp"
+            android:autofillHints=""
+            android:valueFrom="1"
+            android:valueTo="10"
+            app:labelBehavior="gone"
+            app:layout_constraintTop_toBottomOf="@+id/layout_params"
+            app:values="@array/initial_slider_rating_values" />
+
+        <TextView
+            android:id="@+id/min_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/search_settings_rating_slider"
+            app:layout_constraintTop_toBottomOf="@+id/search_settings_rating_slider" />
+
+        <TextView
+            android:id="@+id/max_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/search_settings_rating_slider"
+            app:layout_constraintTop_toBottomOf="@+id/search_settings_rating_slider" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="10dp"
+            android:background="@color/teal_200"
+            app:layout_constraintTop_toBottomOf="@+id/max_rating" />
+
+        <TextView
+            android:id="@+id/text_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20sp"
+            android:layout_marginVertical="10dp"
+            android:text="@string/sort"
+            android:textColor="@color/teal_200"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+        <RadioGroup
+            android:id="@+id/search_radio_group_sort_film"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20sp"
+            android:layout_marginVertical="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_sort">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/sort_data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="-1dp"
+                android:layout_weight="0.2"
+                android:background="@drawable/radio_selector_left"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/data"
+                android:textColor="@color/selection_radio_color"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/sort_popularity"
+                android:layout_width="0dp"
+                android:checked="true"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:background="@drawable/radio_selector_center"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/popular"
+                android:textColor="@color/selection_radio_color"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/sort_rating"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-1dp"
+                android:layout_weight="0.2"
+                android:background="@drawable/radio_selector_right"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/rating"
+                android:textColor="@color/selection_radio_color"
+                android:textSize="14sp" />
+
+        </RadioGroup>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="10dp"
+            android:background="@color/teal_200"
+            app:layout_constraintTop_toBottomOf="@+id/search_radio_group_sort_film" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/viewed_film"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="36dp"
+            android:layout_marginVertical="10dp"
+            android:button="@drawable/search_settings_checkbox_selector"
+            android:paddingHorizontal="36dp"
+            android:text="@string/no_viewed"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

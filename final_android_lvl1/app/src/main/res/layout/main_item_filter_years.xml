@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20sp"
+    android:background="@drawable/custom_buttom">
+
+    <TextView
+        android:id="@+id/range_years"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="@string/range"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/next_years"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:src="@drawable/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_years"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:rotation="180"
+        android:src="@drawable/next"
+        app:layout_constraintEnd_toStartOf="@+id/next_years"
+        app:layout_constraintTop_toTopOf="@+id/next_years" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/range_years">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_one"
+                style="@style/counter_years_film"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="30sp" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_two"
+                style="@style/counter_years_film"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="30sp" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_three"
+                style="@style/counter_years_film"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="30sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_four"
+                style="@style/counter_years_film"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="30sp" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_five"
+                style="@style/counter_years_film"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="30sp" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_six"
+                style="@style/counter_years_film"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_seven"
+                style="@style/counter_years_film"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="35sp" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_eight"
+                style="@style/counter_years_film"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="30sp" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_nine"
+                style="@style/counter_years_film"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_ten"
+                style="@style/counter_years_film"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="30sp" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_eleven"
+                style="@style/counter_years_film"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="30sp" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_twelve"
+                style="@style/counter_years_film"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="30sp" />
+        </LinearLayout>
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

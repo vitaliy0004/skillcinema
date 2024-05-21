@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentetion.basic.search.filter_genre_country.FilterCountryGenreFragment">
+
+    <include
+        android:id="@+id/name_collection"
+        layout="@layout/main_item_collection_name"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_group"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginHorizontal="20sp"
+        android:layout_marginVertical="20sp"
+        android:background="@drawable/search_input"
+        android:padding="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_collection">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search_my_field"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:drawablePadding="8dp"
+            android:background="@drawable/search_input"
+            android:drawableTint="@color/teal_200"
+            android:hint="@string/enter_country"
+            android:maxLines="1"
+            android:paddingHorizontal="18dp"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20sp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/search_group"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_group">
+        <include
+            android:id="@+id/no_wifi"
+            layout="@layout/main_item_wifi" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

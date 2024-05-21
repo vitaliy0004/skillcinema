@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragments">
+
+
+    <fragment
+        android:id="@+id/searchFragments"
+        android:name="com.example.final_android_lvl1.presentetion.basic.search.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/main_fragment_search" >
+
+        <action
+            android:id="@+id/action_searchFragments_to_filterFilmFragment"
+            app:destination="@id/filterFilmFragment" />
+        <action
+            android:id="@+id/action_searchFragments_to_detailFilmFragment"
+            app:destination="@id/detailFilmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragments"
+        android:name="com.example.final_android_lvl1.presentetion.basic.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/main_fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_collectionFilm"
+            app:destination="@id/collectionFilm" />
+        <action
+            android:id="@+id/action_homeFragments_to_detailFilmFragment"
+            app:destination="@id/detailFilmFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragments"
+        android:name="com.example.final_android_lvl1.presentetion.basic.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/main_fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragments_to_detailFilmFragment"
+            app:destination="@id/detailFilmFragment" />
+        <action
+            android:id="@+id/action_profileFragments_to_collectionFilm"
+            app:destination="@id/collectionFilm" />
+    </fragment>
+    <fragment
+        android:id="@+id/collectionFilm"
+        android:name="com.example.final_android_lvl1.presentetion.basic.home.all_collection.AllCollectionFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/main_fragment_all_collection" >
+
+        <action
+            android:id="@+id/action_collectionFilm_to_detailFilmFragment"
+            app:destination="@id/detailFilmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFilmFragment"
+        android:name="com.example.final_android_lvl1.presentetion.basic.home.detail.DetailFilmFragment"
+        android:label="main_fragment_detail_film"
+        tools:layout="@layout/main_fragment_detail_film">
+        <action
+            android:id="@+id/action_detailFilmFragment_to_collectionFilm"
+            app:destination="@id/collectionFilm" />
+        <action
+            android:id="@+id/action_detailFilmFragment_to_seasonFilmFragment"
+            app:destination="@id/seasonFilmFragment" />
+        <action
+            android:id="@+id/action_detailFilmFragment_self"
+            app:destination="@id/detailFilmFragment" />
+        <action
+            android:id="@+id/action_detailFilmFragment_to_galleryPhoto"
+            app:destination="@id/galleryPhoto" />
+        <action
+            android:id="@+id/action_detailFilmFragment_to_galleryCollectionPhoto"
+            app:destination="@id/galleryCollectionPhoto"/>
+        <action
+            android:id="@+id/action_detailFilmFragment_to_personFragment"
+            app:destination="@id/personFragment" />
+        <action
+            android:id="@+id/action_detailFilmFragment_to_allPersonFragment"
+            app:destination="@id/allPersonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seasonFilmFragment"
+        android:name="com.example.final_android_lvl1.presentetion.basic.home.season.SeasonFilmFragment"
+        android:label="main_fragment_season_film"
+        tools:layout="@layout/main_fragment_season_film" />
+    <fragment
+        android:id="@+id/galleryPhoto"
+        android:name="com.example.final_android_lvl1.presentetion.basic.home.gallery.GalleryPhotoFragment"
+        android:label="main_fragment_gallery_photo"
+        tools:layout="@layout/main_fragment_gallery_photo" >
+    </fragment>
+    <fragment
+        android:id="@+id/galleryCollectionPhoto"
+        android:name="com.example.final_android_lvl1.presentetion.basic.home.gallery.GalleryCollectionPhotoFragment"
+        android:label="main_fragment_gallery_collection_photo"
+        tools:layout="@layout/main_fragment_gallery_collection_photo" >
+        <action
+            android:id="@+id/action_galleryCollectionPhoto_to_galleryPhoto"
+            app:destination="@id/galleryPhoto" />
+    </fragment>
+    <fragment
+        android:id="@+id/personFragment"
+        android:name="com.example.final_android_lvl1.presentetion.basic.home.person.PersonFragment"
+        android:label="main_fragment_person"
+        tools:layout="@layout/main_fragment_person" >
+        <action
+            android:id="@+id/action_personFragment_to_detailFilmFragment"
+            app:destination="@id/detailFilmFragment" />
+        <action
+            android:id="@+id/action_personFragment_to_collectionFilm"
+            app:destination="@id/collectionFilm" />
+        <action
+            android:id="@+id/action_personFragment_to_personProfessionFragment"
+            app:destination="@id/personProfessionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allPersonFragment"
+        android:name="com.example.final_android_lvl1.presentetion.basic.home.person.AllPersonFragment"
+        android:label="main_fragment_all_person"
+        tools:layout="@layout/main_fragment_all_person" >
+        <action
+            android:id="@+id/action_allPersonFragment_to_personFragment"
+            app:destination="@id/personFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personProfessionFragment"
+        android:name="com.example.final_android_lvl1.presentetion.basic.home.person.PersonProfessionFragment"
+        android:label="PersonProfessionFragment" >
+        <action
+            android:id="@+id/action_personProfessionFragment_to_detailFilmFragment"
+            app:destination="@id/detailFilmFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/filterFilmFragment"
+        android:name="com.example.final_android_lvl1.presentetion.basic.search.FilterFilmFragment"
+        android:label="main_fragment_search_filter_film"
+        tools:layout="@layout/main_fragment_search_filter_film" >
+        <action
+            android:id="@+id/action_filterFilmFragment_to_filterCountryGenreFragment"
+            app:destination="@id/filterCountryGenreFragment" />
+        <action
+            android:id="@+id/action_filterFilmFragment_to_yearFilterFragment"
+            app:destination="@id/yearFilterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterCountryGenreFragment"
+        android:name="com.example.final_android_lvl1.presentetion.basic.search.filter_genre_country.FilterCountryGenreFragment"
+        android:label="main_fragment_filter_country_genre"
+        tools:layout="@layout/main_fragment_filter_country_genre" >
+    </fragment>
+    <fragment
+        android:id="@+id/yearFilterFragment"
+        android:name="com.example.final_android_lvl1.presentetion.basic.search.filter_genre_country.YearFilterFragment"
+        android:label="main_fragment_year_filter"
+        tools:layout="@layout/main_fragment_year_filter" />
+</navigation>
