@@ -119,8 +119,8 @@ class FilterFilmFragment : Fragment() {
             binding.maxRating.text = viewModule.filterMapInt["ratingTo"]!!.toString()
             binding.rating.filterParams.text = getString(
                 R.string.period_film,
-                viewModule.filterMapInt["yearFrom"],
-                viewModule.filterMapInt["yearTo"]
+                viewModule.filterMapInt["ratingFrom"],
+                viewModule.filterMapInt["ratingTo"]
             )
         }
 
